@@ -1,0 +1,68 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #242627;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.panel {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+.one {
+    display: grid;
+    place-content: center;
+}
+
+.two {
+    display: grid;
+    place-content: center;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.quote-line {
+    font-family: "forum";
+    font-size: 2rem;
+    color: #E5FCFF;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-line {
+    font-family: "Oswald";
+    font-size: 3rem;
+    color: #E5FCFF;
+}
+
+#h1a {
+    position: relative;
+    top: 30px;
+}
