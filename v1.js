@@ -27,7 +27,7 @@ tl1.from('#q1a', {
 }, '<1').from('#q1d', {
     opacity: 0,
     duration: .5
-}, '<1.5').from('.sq1', {
+}, '<1.2').from('.sq1', {
     stagger: 1,
     opacity: 0,
     duration: .5
@@ -55,4 +55,9 @@ tl2.from('#h1a', {
     duration: .5,
     text: "jxnesforge",
     delay: 1
-}, '<.3')
+}, '<.3').from('.welcome > img', {
+    x: "-20%",
+    opacity: 0,
+    duration: .5,
+    ease: "power",
+}, '=')

@@ -39,7 +39,7 @@ body {
 }
 
 .quote-line {
-    font-family: "forum";
+    font-family: "Forum";
     font-size: 2rem;
     color: #E5FCFF;
 }
@@ -57,12 +57,21 @@ body {
 }
 
 .hero-line {
-    font-family: "Oswald";
+    font-family: "Arvo";
     font-size: 3rem;
     color: #E5FCFF;
 }
 
+.welcome > img {
+    position: relative;
+    /* top: 50px; */
+}
+
 #h1a {
     position: relative;
-    top: 30px;
+    bottom: -20px;
+}
+
+#h1b {
+    color: #397367;
 }
