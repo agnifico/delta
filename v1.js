@@ -6,6 +6,7 @@ ScrollTrigger.defaults({
     scroller: ".container"
 });
 
+// gsap.set('#sh1', {text: ''});
 
 let tl1 = gsap.timeline({
     scrollTrigger: '.one',
@@ -100,17 +101,21 @@ tl4.from('.xpillar', {
     // fontFamily: "Inconsolata",
     text: "",
     stagger: .5
-})
+});
 
 let tl5 = gsap.timeline({
     scrollTrigger: '.five',
     delay: .5,
 });
 
-tl5.from('.stage', {
+tl5.fromTo('.stage', {
     duration: .5,
     opacity: 0,
-    y: -100
+}, {
+    duration: .2,
+    opacity: 1,
+    x: 350,
+    y: 0
 })
 
 
