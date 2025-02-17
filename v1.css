@@ -1,14 +1,30 @@
+:root {
+    --bg: #242627;
+    --light-pink: #FFD0D0;
+    --pink: #FF9EAA;
+    --text-white: #F7F9F2;
+    --fire: #EB5353;
+    --water: #4D96FF;
+    --earth: #36AE7C;
+    --wind: #F7F48B;
+    --magnifier: 6;
+    --gap: 1vmin;
+    --transition: 0.5s;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #242627;
+    overflow-x: hidden;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -22,6 +38,12 @@ body {
     height: 100vh;
 }
 
+.common-text {
+    color: #F7F9F2;
+    font-family: "Inconsolata";
+    font-size: 1.3rem;
+}
+
 .one {
     display: grid;
     place-content: center;
@@ -30,6 +52,23 @@ body {
 .two {
     display: grid;
     place-content: center;
+}
+
+.three {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242627;
+    z-index: 3;
+}
+
+.four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .landing {
@@ -41,7 +80,7 @@ body {
 .quote-line {
     font-family: "Forum";
     font-size: 2rem;
-    color: #E5FCFF;
+    color: #E8F7EE;
 }
 
 .hero {
@@ -59,10 +98,10 @@ body {
 .hero-line {
     font-family: "Arvo";
     font-size: 3rem;
-    color: #E5FCFF;
+    color: #A1B3A5;
 }
 
-.welcome > img {
+.welcome>img {
     position: relative;
     /* top: 50px; */
 }
@@ -74,4 +113,334 @@ body {
 
 #h1b {
     color: #397367;
+}
+
+
+.right-half {
+    width: 30%;
+    margin: 0 0 0 auto;
+    /* background-color: #443850; */
+    text-align: right;
+    display: grid;
+    place-content: center;
+}
+
+.section-header {
+    /* border-left: 2px solid #F1BF98; */
+    /* border-bottom: 2px solid #F1BF98; */
+    width: max-content;
+    height: fit-content;
+    margin-bottom: 5rem;
+    margin-top: 7rem;
+}
+
+.section-header-line {
+    font-family: "Bree Serif";
+    font-size: 2rem;
+    color: #DB5461;
+
+}
+
+.pillars {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pillar {
+    font-family: "Forum";
+    font-size: 2rem;
+    color: #F7F9F2;
+    opacity: .5;
+}
+
+.xpillars {
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    width: max-content;
+}
+
+
+
+.xpillar {
+    margin: auto 0;
+    font-family: "Oswald";
+    font-size: 5rem;
+    color: #A19375;
+    opacity: .5;
+    cursor: none;
+}
+
+/* .xpillar:nth-child(2n) {
+    color: #A19375;
+}
+.xpillar:nth-child(2n+1) {
+    color: #397367;
+} */
+
+.xpillars:hover {
+    line-height: 7rem;
+    transition: all 1s ease;
+}
+
+
+.parallax-container {
+    /* use CSS variables calculated in JavaScript */
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+    transform-style: preserve-3d;
+    transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+    will-change: transform;
+}
+
+.img-grid {
+    width: 80%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.img-grid img {
+    position: relative;
+    --brightness: 0.75;
+    --grayscale: 1;
+    transition: flex var(--transition), filter var(--transition);
+    height: 100%;
+    filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+    object-fit: cover;
+    overflow: hidden;
+    flex: 1;
+    opacity: 0;
+}
+
+.img-grid img:hover {
+    --brightness: 1.15;
+    --grayscale: 0;
+    flex: var(--magnifier);
+}
+
+.controls {
+    /* background-color: #242627; */
+    /* width: inherit; */
+    position: relative;
+    top: 50px;
+    text-align: center;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: #F7F9F2;
+}
+
+.gallery-name {
+    /* background-color: #412234; */
+    font-family: "Forum";
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: 2px solid goldenrod;
+    margin: auto;
+    color: #F1BF98;
+}
+
+.xpillars {
+    @media (hover) and (prefers-reduced-motion: no-preference) {
+        &>.xpillar {
+            transition: opacity .3s var(--ease-3);
+        }
+
+        &:hover>.xpillar:not(:hover) {
+            opacity: .25;
+        }
+    }
+}
+
+.five {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+button {
+    /* margin: 2rem; */
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    padding: .5rem 1rem;
+    font-family: "Fira Code", monospace;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid #A19375;
+    color: #F7F9F2;
+    box-shadow: hsla(0, 0%, 0%, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, hsla(45, 41%, 38%, .5) 0px -4px 0px inset;
+}
+
+button:focus {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    /* color: #DEA702; */
+    box-shadow: hsla(0, 0%, 0%, 0.4) 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, hsla(45, 41%, 38%, .8) 0px -4px 0px inset;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.stage {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    /* background-color: #A1B3A5; */
+    position: relative;
+    left: -200px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: 4pt solid #A19375;
+    background-color: #242627;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 1rem; */
+    margin-inline: 1.5rem;
+    position: relative;
+}
+
+
+.card-title {
+    font-family: "Arvo";
+    font-size: 1rem;
+    color: #8D6B94;
+    /* background-color: #36AE7C; */
+    padding: .5rem 1rem;
+    /* margin-bottom: 1rem; */ 
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px dashed #A19375;
+}
+
+.card:nth-child(1) {
+    /* transform: rotate(7.5deg); */
+    top: -40px;
+    left: 220px;
+    box-shadow:
+    hsla(0, 0%, 0%, 0.4) 0px 0px 10px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    hsla(145, 43%, 54%, .5) -4px -4px 0px inset,
+    hsla(145, 43%, 54%, .5) 4px 4px 0px inset;
+    z-index: 3;
+}
+
+.card:nth-child(2) {
+    /* transform: rotate(-4deg); */
+    box-shadow:
+    hsla(0, 0%, 0%, 0.4) 0px 0px 10px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    hsla(356, 82%, 66%, .5) -4px -4px 0px inset,
+    hsla(356, 82%, 66%, .5) 4px 4px 0px inset;
+    z-index: 2;
+}
+
+.card:nth-child(3) {
+    /* transform: rotate(5deg); */
+    top: 40px;
+    left: -220px;
+    box-shadow:
+    hsla(0, 0%, 0%, 0.4) 0px 0px 10px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    hsla(188, 47%, 53%, .5) -4px -4px 0px inset,
+    hsla(188, 47%, 53%, .5) 4px 4px 0px inset;
+    z-index: 1;
+    .card-title {
+        font-size: .9rem;
+    }
+}
+
+.card:hover {
+    /* transform: scale(1.1); */
+    cursor: pointer;
+    z-index: 99;
+}
+
+
+.card-image {
+    aspect-ratio: 1;
+    width: 120px;
+    padding: 0.5rem 1rem;
+}
+
+.card-text {
+    font-family: "Inconsolata";
+    color: #D7D0C8;
+    height: auto;
+    /* background-color: #2E4057; */
+    width: 100%;
+    /* height: 100%; */
+    padding-top: 1rem;
+    padding-inline: .7rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.stat {
+    color: #58BC82;
+}
+
+.nstat {
+    color: #D1603D;
+}
+
+.special-ability {
+    color: #8EA8C3;
+}
+
+.left-half {
+    width: 40%;
+    margin: 0 0 0 0;
+    /* background-color: #36AE7C; */
+    /* padding-left: 2rem; */
+    height: 100%;
+}
+
+.common-heading {
+    color: #A1B3A5;
+    font-family: "Oswald";
+    font-size: 3rem;
+    position: relative;
+    /* opacity: .5; */
+}
+
+.card-details {
+    position: relative;
+    width:fit-content;
+}
+
+.card-details-box {
+    /* visibility: hidden; */
+    opacity: 0;
+    position: absolute; 
+    top: 60vh;
+    width: 30vw;
+    left: 5vw;
 }

@@ -1,63 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>jxnesforge</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Forum&family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="v1.css">
-    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
-    <script src="v1.js" defer></script>
+  <title>jxnesforge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Fira+Code:wght@300..700&family=Forum&family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="v1.css">
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+  <script src="v1.js" defer></script>
+  <script src="v1x.js" defer></script>
 </head>
+
 <body>
 
-    
 
-<div class="container">
+
+  <div class="container">
     <section class="panel one">
       <div class="landing">
-        <div class="quote-line" id="q1a">The master <span id="q1b" style="color: #B8336A;">economist</span> must possess a </div>
+        <div class="quote-line" id="q1a">The master <span id="q1b" style="color: #df3756;">economist</span> must possess
+          a </div>
         <div class="quote-line" id="q1c">rare combination of gifts. <span id="q1d">He must be:</span> </div>
-        <div class="quote-line sq1" style="color: #ABDAFC;">a mathematician, </div>
-        <div class="quote-line sq1" style="color: #ACACDE;">a historian, </div>
-        <div class="quote-line sq1" style="color: #C490D1;">a statesman, </div>
-        <div class="quote-line sq1" style="color: #397367;">and a philosopher.</div>
+        <div class="quote-line sq1" style="color: #9FC581;">a mathematician, </div>
+        <div class="quote-line sq1" style="color: #89B865;">a historian, </div>
+        <div class="quote-line sq1" style="color: #659B5E;">a statesman, </div>
+        <div class="quote-line sq1" style="color: #537E4E;">and a philosopher.</div>
+      </div>
+      <audio id="hard-click" src="sounds/mixkit-hard-typewriter-click-1119.wav" preload></audio>
+      <audio id="soft-click" src="sounds/mixkit-typewriter-soft-click-1125.wav" preload></audio>
+      <audio id="wine-glass" src="sounds/mixkit-wine-glass-clink-2936.wav" preload></audio>
+    </section>
+
+    <section class="panel two">
+      <div class="hero">
+        <div class="welcome">
+          <img src="images/Logo_Main.svg" style="aspect-ratio: 1;" height="100px">
+          <div class="hero-line" id="h1a">welcome to</div>
+          <div class="hero-line" id="h1b">
+            <span id="h1c">June's </span>
+            <span id="h1d">Forge</span>
+          </div>
+
+        </div>
       </div>
     </section>
-  
-    <section class="panel two">
-        <div class="hero">
-            <div class="welcome">
-              <img src="Logo_Main.svg" style="aspect-ratio: 1;" height="100px">
-                <div class="hero-line" id="h1a">welcome to</div>
-                <div class="hero-line" id="h1b">
-                  <span id="h1c">June's </span>
-                  <span id="h1d">Forge</span>
-                </div>
-                
-            </div>
-        </div>
+
+    <section class="three panel">
+
+      <div class="img-grid" id="img-grid-one">
+        <img src="images/Earth2.jpg" alt="" srcset="">
+        <img src="images/Fire2.jpg" alt="" srcset="">
+        <img src="images/Water3.jpg" alt="" srcset="">
+        <img src="images/Earth3.jpg" alt="" srcset="">
+        <img src="images/Wind2.jpg" alt="" srcset="">
+        <img src="images/Fire5.jpg" alt="" srcset="">
+        <img src="images/Wind3.jpg" alt="" srcset="">
+        <img src="images/Water2.jpg" alt="" srcset="">
+      </div>
+      <div class="img-grid" id="img-grid-two" style="display:none">
+        <img src="images/Wind2.jpg" alt="" srcset="">
+        <img src="images/Fire3.jpg" alt="" srcset="">
+        <img src="images/Water5.jpg" alt="" srcset="">
+        <img src="images/Earth3.jpg" alt="" srcset="">
+      </div>
+
+      <div class="controls">
+        <button onclick="openTab('img-grid-one', 'img-grid', 'flex')">
+          Isometric
+        </button>
+        <button onclick="openTab('img-grid-two', 'img-grid', 'flex')">
+          More Isometric
+        </button>
+      </div>
     </section>
-  
-    <section class="panel three">
-      <p>This background color will change</p>
-    </section>
-  
+
     <section class="panel four">
-      
+      <div class="parallax-container" id="pc">
+        <div class="xpillars">
+          <div class="xpillar">STRUCTURALLY SOUND.</div>
+          <div class="xpillar">VISUALLY PLEASING.</div>
+          <div class="xpillar">FUNCTIONALLY SEASONED.</div>
+          <div class="xpillar">BEHAVIOURALLY CONSIDERATE.</div>
+          <div class="xpillar">and a 100% genius.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="panel five">
+
+      <div class="left-half" id="lh1">
+        <div class="card-details-box" id="gd">
+          <div class="common-heading">
+            Graphic Design
+          </div>
+          <div class="common-text card-details">
+            I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2,
+            assisted
+            by an iPad and a Pencil.
+          </div>
+        </div>
+        <div class="card-details-box" id="wd">
+          <div class="common-heading">
+            Web Design
+          </div>
+          <div class="common-text card-details">
+            Those four years of computer engineering have to account for something, right? Backend? Frontend? I don't
+            really see a difference. I gotchu fam.
+          </div>
+        </div>
+        <div class="card-details-box" id="cw">
+          <div class="common-heading">
+            Content Writing
+          </div>
+          <div class="common-text card-details">
+            I used to be the Editor-in-Chief of my college media organisation, while also working with the yearbook
+            team,
+            The Editorial Board. I'm no Hemingway, but I can handle my own when it comes to copy writing, or editing.
+          </div>
+        </div>
+      </div>
+
+      <div class="stage" id="stage">
+        <div class="card" onclick="openTab('gd')" id="card-1">
+          <div class="card-title">Artist's Foliar Blade</div>
+          <img src="images/a.svg" class="card-image">
+          <div class="card-text">
+            <div class="attribute">
+              <span class="stat">+10%</span> Worldbuilding
+            </div>
+            <div class="attribute">
+              <span class="stat">+20%</span> Expression
+            </div>
+            <div class="special-ability">
+              ◇ Space/Time Travel
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="openTab('cw')"  id="card-2">
+          <div class="card-title">Penman's Spear</div>
+          <img src="images/b.svg" class="card-image">
+          <div class="card-text">
+            <div class="attribute">
+              <span class="stat">+50</span> Wordsmithing
+            </div>
+            <div class="attribute">
+              <span class="stat">+20</span> Storytelling
+            </div>
+            <div class="special-ability">
+              ◇ Encyclopaedic Awareness
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="openTab('wd')"  id="card-3">
+          <div class="card-title">Web Mason's Phalanx</div>
+          <img src="images/c.svg" class="card-image">
+          <div class="card-text">
+            <div class="attribute">
+              <span class="stat">+75</span> Tenacity
+            </div>
+            <div class="attribute">
+              <span class="nstat">-10%</span> Agility
+            </div>
+            <div class="attribute">
+              <span class="stat">+5</span> Bragging Rights
+            </div>
+            <div class="special-ability">
+              ◇ Night Shift
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel six">
+      Helloz
     </section>
   </div>
-  
-  
-  
-    
+
+
+
+
 </body>
+
 </html>

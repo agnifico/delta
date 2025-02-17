@@ -38,7 +38,8 @@ tl1.from('#q1a', {
 
 let tl2 = gsap.timeline({
     scrollTrigger: '.two',
-    delay: .5
+    delay: .5,
+    toggleActions: "restart pause complete pause",
 });
 
 tl2.from('#h1a', {
@@ -61,3 +62,55 @@ tl2.from('#h1a', {
     duration: .5,
     ease: "power",
 }, '=')
+
+let tl3 = gsap.timeline({
+    scrollTrigger: '.three',
+    delay: 1.5,
+});
+
+let tl35 = gsap.timeline({
+    scrollTrigger: '.three',
+    delay: .5,
+});
+
+tl3.from('.controls', {
+    opacity: 0,
+    duration: .25,
+    // x: -50,
+    y: 50,
+});
+tl35.to('.img-grid img', {
+    // position: 'relative',
+    // flex: 1,
+    opacity: 1,
+    duration: 1.5,
+    // scrub: .5,
+    // ease: 'bounce',
+    stagger: 1 / 8
+});
+
+
+let tl4 = gsap.timeline({
+    scrollTrigger: '.four',
+    delay: 0,
+});
+
+tl4.from('.xpillar', {
+    duration: 1.5,
+    // fontFamily: "Inconsolata",
+    text: "",
+    stagger: .5
+})
+
+let tl5 = gsap.timeline({
+    scrollTrigger: '.five',
+    delay: .5,
+});
+
+tl5.from('.stage', {
+    duration: .5,
+    opacity: 0,
+    y: -100
+})
+
+
