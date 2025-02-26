@@ -5,8 +5,10 @@
   <title>jxnesforge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Fira+Code:wght@300..700&family=Forum&family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Fira+Code:wght@300..700&family=Forum&family=Inconsolata:wght@200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="v1.css">
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
@@ -55,6 +57,7 @@
     </section>
 
     <section class="three panel">
+      <div class="section-heading">Gallery</div>
 
       <div class="img-grid" id="img-grid-one">
         <img src="images/Earth2.jpg" alt="" srcset="">
@@ -97,94 +100,117 @@
     </section>
 
     <section class="panel five">
-      <h2 class="section-heading" id="sh1">Skillset</h2>
-      <div class="stage" id="stage">
-        <div class="card" onclick="openTab('gd')" id="card-1">
-          <div class="card-title">Artist's Foliar Blade</div>
-          <img src="images/a.svg" class="card-image">
-          <div class="card-text">
-            <div class="attribute">
-              <span class="stat">+10%</span> Worldbuilding
+      <div class="section-heading" id="armoury"> </div>
+      <div class="content-box">
+        <div class="stage" id="stage">
+          <div class="card" onclick="openTab('gd')" id="card-1">
+            <div class="card-title">Artist's Foliar Blade</div>
+            <img src="images/a.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+10%</span> Worldbuilding
+              </div>
+              <div class="attribute">
+                <span class="stat">+20%</span> Expression
+              </div>
+              <div class="special-ability">
+                ◇ Space/Time Travel
+              </div>
             </div>
-            <div class="attribute">
-              <span class="stat">+20%</span> Expression
+          </div>
+          <div class="card" onclick="openTab('cw')" id="card-2">
+            <div class="card-title">Penman's Spear</div>
+            <img src="images/b.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+50</span> Wordsmithing
+              </div>
+              <div class="attribute">
+                <span class="stat">+20</span> Storytelling
+              </div>
+              <div class="special-ability">
+                ◇ Encyclopaedic Awareness
+              </div>
             </div>
-            <div class="special-ability">
-              ◇ Space/Time Travel
+          </div>
+          <div class="card" onclick="openTab('wd')" id="card-3">
+            <div class="card-title">Web Mason's Phalanx</div>
+            <img src="images/c.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+75</span> Tenacity
+              </div>
+              <div class="attribute">
+                <span class="nstat">-10%</span> Agility
+              </div>
+              <div class="attribute">
+                <span class="stat">+5</span> Bragging Rights
+              </div>
+              <div class="special-ability">
+                ◇ Night Shift
+              </div>
             </div>
           </div>
         </div>
-        <div class="card" onclick="openTab('cw')" id="card-2">
-          <div class="card-title">Penman's Spear</div>
-          <img src="images/b.svg" class="card-image">
-          <div class="card-text">
-            <div class="attribute">
-              <span class="stat">+50</span> Wordsmithing
+        <div class="left-half" id="lh1">
+          <div class="card-details-box" id="gd">
+            <div class="common-heading">
+              Graphic Design
             </div>
-            <div class="attribute">
-              <span class="stat">+20</span> Storytelling
-            </div>
-            <div class="special-ability">
-              ◇ Encyclopaedic Awareness
+            <div class="common-text card-details">
+              I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2,
+              assisted
+              by an iPad and a Pencil.
             </div>
           </div>
-        </div>
-        <div class="card" onclick="openTab('wd')" id="card-3">
-          <div class="card-title">Web Mason's Phalanx</div>
-          <img src="images/c.svg" class="card-image">
-          <div class="card-text">
-            <div class="attribute">
-              <span class="stat">+75</span> Tenacity
+          <div class="card-details-box" id="wd">
+            <div class="common-heading">
+              Web Design
             </div>
-            <div class="attribute">
-              <span class="nstat">-10%</span> Agility
+            <div class="common-text card-details">
+              Those four years of computer engineering have to account for something, right? Backend? Frontend? I don't
+              really see a difference. I gotchu fam.
             </div>
-            <div class="attribute">
-              <span class="stat">+5</span> Bragging Rights
+          </div>
+          <div class="card-details-box" id="cw">
+            <div class="common-heading">
+              Content Writing
             </div>
-            <div class="special-ability">
-              ◇ Night Shift
+            <div class="common-text card-details">
+              I used to be the Editor-in-Chief of my college media organisation, while also working with the yearbook
+              team,
+              The Editorial Board. I'm no Hemingway, but I can handle my own when it comes to copy writing, or editing.
             </div>
           </div>
         </div>
-      </div>
-      <div class="left-half" id="lh1">
-        <div class="card-details-box" id="gd">
-          <div class="common-heading">
-            Graphic Design
-          </div>
-          <div class="common-text card-details">
-            I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2,
-            assisted
-            by an iPad and a Pencil.
-          </div>
-        </div>
-        <div class="card-details-box" id="wd">
-          <div class="common-heading">
-            Web Design
-          </div>
-          <div class="common-text card-details">
-            Those four years of computer engineering have to account for something, right? Backend? Frontend? I don't
-            really see a difference. I gotchu fam.
-          </div>
-        </div>
-        <div class="card-details-box" id="cw">
-          <div class="common-heading">
-            Content Writing
-          </div>
-          <div class="common-text card-details">
-            I used to be the Editor-in-Chief of my college media organisation, while also working with the yearbook
-            team,
-            The Editorial Board. I'm no Hemingway, but I can handle my own when it comes to copy writing, or editing.
-          </div>
-        </div>
+
       </div>
 
 
     </section>
 
     <section class="panel six">
-      Helloz
+      <div class="section-heading">Forge Armoury // Skillset</div>
+      <div class="box">
+        <div class="forge-blueprint">
+          <img src="images/scimitar3.svg">
+        </div>
+        <div class="details">
+          <button><img src="images/pen-2-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+          <button><img src="images/brush-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+          <button><img src="images/code-square-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+          <div class="common-heading">Graphic Design</div>
+          <div class="common-text">
+            I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2, assisted
+            by an iPad and a Pencil.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="panel seven">
+
     </section>
   </div>
 

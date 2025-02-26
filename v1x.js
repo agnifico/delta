@@ -68,14 +68,14 @@ let x = document.getElementsByClassName('card-details-box');
 let tween1 = gsap.timeline();
 
 tween1.to('.card', {
-    x: -350,
+    x: 0,
     duration: .3
 }).to('#card-1', {
-    x: -500,
+    x: 0,
     // y: -50,
     duration: .1
 }).to('#card-3', {
-    x: -200,
+    x: 0,
     // y: 50,
     duration: .1
 });
@@ -104,10 +104,10 @@ tween1.pause();
 
 function openTab(tabName, displayType = 'visible', thissound = "soft-click") {
     PlaySound(thissound);
-    // exit
+    // return
     if (lastCard != ' ') {
         gsap.to('#' + lastCard, {
-            y: -100,
+            // y: -100,
             x: 0,
             opacity: 0,
             duration: .5
@@ -121,7 +121,7 @@ function openTab(tabName, displayType = 'visible', thissound = "soft-click") {
     }
     // entry
     gsap.to('#' + tabName, {
-        y: -100,
+        // y: -100,
         x: 0,
         opacity: 1,
         duration: .5
