@@ -310,7 +310,7 @@ button:active {
     /* justify-content: center; */
     align-items: center;
     overflow-x: hidden;
-    height: 100svh;
+    height: 100dvh;
     width: 100%;
 }
 
