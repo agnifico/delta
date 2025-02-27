@@ -81,53 +81,46 @@ tween1.to('.card', {
 });
 tween1.pause();
 
+function openTab(tabName, displayType = 'visible', thissound = "ui-click") {
+    PlaySound(thissound);
+    const x = document.getElementsByClassName('armoury-details');
+    const y = document.getElementsByClassName('blueprint');
+
+    for (let i = 0; i < x.length; i++) {
+        x[i].style.visibility = "hidden";
+        y[i].style.visibility = "hidden";
+    }
+    
+    document.getElementById(tabName).style.visibility = displayType;
+    document.getElementById(tabName + '-bp').style.visibility = displayType;
+}
+
 // function openTab(tabName, displayType = 'visible', thissound = "soft-click") {
 //     PlaySound(thissound);
-
-//     if (lh1.style.position == 'absolute') {
-//         lh1.style.position = 'relative';
-//         tween1.play();
-//     }
-//     else {
+//     // return
+//     if (lastCard != ' ') {
+//         gsap.to('#' + lastCard, {
+//             // y: -100,
+//             x: 0,
+//             opacity: 0,
+//             duration: .5
+//         });
+//         // card reverse
 //         if (tabName == lastCard) {
-//             lh1.style.position = 'absolute';
 //             tween1.reverse();
+//             lastCard = ' ';
 //             return;
 //         }
 //     }
-//     for (let i = 0; i < x.length; i++) {
-//         x[i].style.visibility = "hidden";
-//     }
-//     document.getElementById(tabName).style.visibility = displayType;
-//     lastCard = String(tabName); 
+//     // entry
+//     gsap.to('#' + tabName, {
+//         // y: -100,
+//         x: 0,
+//         opacity: 1,
+//         duration: .5
+//     });
+//     tween1.play();
+//     lastCard = String(tabName);
 // }
-
-function openTab(tabName, displayType = 'visible', thissound = "soft-click") {
-    PlaySound(thissound);
-    // return
-    if (lastCard != ' ') {
-        gsap.to('#' + lastCard, {
-            // y: -100,
-            x: 0,
-            opacity: 0,
-            duration: .5
-        });
-        // card reverse
-        if (tabName == lastCard) {
-            tween1.reverse();
-            lastCard = ' ';
-            return;
-        }
-    }
-    // entry
-    gsap.to('#' + tabName, {
-        // y: -100,
-        x: 0,
-        opacity: 1,
-        duration: .5
-    });
-    tween1.play();
-    lastCard = String(tabName);
-}
 
 

@@ -39,6 +39,7 @@
       </div>
       <audio id="hard-click" src="sounds/mixkit-hard-typewriter-click-1119.wav" preload></audio>
       <audio id="soft-click" src="sounds/mixkit-typewriter-soft-click-1125.wav" preload></audio>
+      <audio id="ui-click" src="sounds/ui-click.wav" preload></audio>
       <audio id="wine-glass" src="sounds/mixkit-wine-glass-clink-2936.wav" preload></audio>
     </section>
 
@@ -60,12 +61,10 @@
       <div class="section-heading">Gallery</div>
 
       <div class="img-grid" id="img-grid-one">
-        <img src="images/Earth2.jpg" alt="" srcset="">
         <img src="images/Fire2.jpg" alt="" srcset="">
         <img src="images/Water3.jpg" alt="" srcset="">
         <img src="images/Earth3.jpg" alt="" srcset="">
         <img src="images/Wind2.jpg" alt="" srcset="">
-        <img src="images/Fire5.jpg" alt="" srcset="">
         <img src="images/Wind3.jpg" alt="" srcset="">
         <img src="images/Water2.jpg" alt="" srcset="">
       </div>
@@ -86,124 +85,44 @@
       </div>
     </section>
 
-    <section class="panel four">
-      <div class="parallax-container" id="pc">
-        <div class="xpillars">
-          <div class="xpillar">STRUCTURALLY SOUND.</div>
-          <div class="xpillar">VISUALLY PLEASING.</div>
-          <div class="xpillar">FUNCTIONALLY SEASONED.</div>
-          <div class="xpillar">BEHAVIOURALLY CONSIDERATE.</div>
-          <div class="xpillar">and a 100% genius.</div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="panel five">
-      <div class="section-heading" id="armoury"> </div>
-      <div class="content-box">
-        <div class="stage" id="stage">
-          <div class="card" onclick="openTab('gd')" id="card-1">
-            <div class="card-title">Artist's Foliar Blade</div>
-            <img src="images/a.svg" class="card-image">
-            <div class="card-text">
-              <div class="attribute">
-                <span class="stat">+10%</span> Worldbuilding
-              </div>
-              <div class="attribute">
-                <span class="stat">+20%</span> Expression
-              </div>
-              <div class="special-ability">
-                ◇ Space/Time Travel
-              </div>
-            </div>
-          </div>
-          <div class="card" onclick="openTab('cw')" id="card-2">
-            <div class="card-title">Penman's Spear</div>
-            <img src="images/b.svg" class="card-image">
-            <div class="card-text">
-              <div class="attribute">
-                <span class="stat">+50</span> Wordsmithing
-              </div>
-              <div class="attribute">
-                <span class="stat">+20</span> Storytelling
-              </div>
-              <div class="special-ability">
-                ◇ Encyclopaedic Awareness
-              </div>
-            </div>
-          </div>
-          <div class="card" onclick="openTab('wd')" id="card-3">
-            <div class="card-title">Web Mason's Phalanx</div>
-            <img src="images/c.svg" class="card-image">
-            <div class="card-text">
-              <div class="attribute">
-                <span class="stat">+75</span> Tenacity
-              </div>
-              <div class="attribute">
-                <span class="nstat">-10%</span> Agility
-              </div>
-              <div class="attribute">
-                <span class="stat">+5</span> Bragging Rights
-              </div>
-              <div class="special-ability">
-                ◇ Night Shift
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="left-half" id="lh1">
-          <div class="card-details-box" id="gd">
-            <div class="common-heading">
-              Graphic Design
-            </div>
-            <div class="common-text card-details">
-              I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2,
-              assisted
-              by an iPad and a Pencil.
-            </div>
-          </div>
-          <div class="card-details-box" id="wd">
-            <div class="common-heading">
-              Web Design
-            </div>
-            <div class="common-text card-details">
-              Those four years of computer engineering have to account for something, right? Backend? Frontend? I don't
-              really see a difference. I gotchu fam.
-            </div>
-          </div>
-          <div class="card-details-box" id="cw">
-            <div class="common-heading">
-              Content Writing
-            </div>
-            <div class="common-text card-details">
-              I used to be the Editor-in-Chief of my college media organisation, while also working with the yearbook
-              team,
-              The Editorial Board. I'm no Hemingway, but I can handle my own when it comes to copy writing, or editing.
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-    </section>
-
     <section class="panel six">
       <div class="section-heading">Forge Armoury // Skillset</div>
       <div class="box">
         <div class="forge-blueprint">
-          <img src="images/scimitar3.svg">
+          <img src="images/scimitar4.svg" class="blueprint" id="gd-bp">
+          <img src="images/shield2.svg" class="blueprint hidden" id="wd-bp">
+          <img src="images/scimitar2.svg" class="blueprint hidden" id="cw-bp">
         </div>
-        <div class="details">
-          <button><img src="images/pen-2-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
-          <button><img src="images/brush-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
-          <button><img src="images/code-square-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
-          <div class="common-heading">Graphic Design</div>
-          <div class="common-text">
-            I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2, assisted
-            by an iPad and a Pencil.
+        <div class="desk">
+          <div class="btn-tray">
+            <button onclick="openTab('cw')"><img src="images/pen-2-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+            <button onclick="openTab('gd')"><img src="images/brush-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+            <button onclick="openTab('wd')"><img src="images/code-square-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
           </div>
+          <div class="details">
+            <div class="box armoury-details" id="gd">
+              <div class="common-heading">Graphic Design</div>
+              <div class="common-text">
+                I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2, assisted
+                by an iPad and a Pencil.
+              </div>
+            </div>
+            <div class="box armoury-details hidden" id="cw">
+              <div class="common-heading">Content Writing</div>
+              <div class="common-text">
+                I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2, assisted
+                by an iPad and a Pencil.
+              </div>
+            </div>
+            <div class="box armoury-details hidden" id="wd">
+              <div class="common-heading">Web Design</div>
+              <div class="common-text">
+                I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2, assisted
+                by an iPad and a Pencil.
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

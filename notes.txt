@@ -1,0 +1,102 @@
+    <section class="panel four">
+      <div class="parallax-container" id="pc">
+        <div class="xpillars">
+          <div class="xpillar">STRUCTURALLY SOUND.</div>
+          <div class="xpillar">VISUALLY PLEASING.</div>
+          <div class="xpillar">FUNCTIONALLY SEASONED.</div>
+          <div class="xpillar">BEHAVIOURALLY CONSIDERATE.</div>
+          <div class="xpillar">and a 100% genius.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="panel five">
+      <div class="section-heading" id="armoury"> </div>
+      <div class="content-box">
+        <div class="stage" id="stage">
+          <div class="card" onclick="openTab('gd')" id="card-1">
+            <div class="card-title">Artist's Foliar Blade</div>
+            <img src="images/a.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+10%</span> Worldbuilding
+              </div>
+              <div class="attribute">
+                <span class="stat">+20%</span> Expression
+              </div>
+              <div class="special-ability">
+                ◇ Space/Time Travel
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="openTab('cw')" id="card-2">
+            <div class="card-title">Penman's Spear</div>
+            <img src="images/b.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+50</span> Wordsmithing
+              </div>
+              <div class="attribute">
+                <span class="stat">+20</span> Storytelling
+              </div>
+              <div class="special-ability">
+                ◇ Encyclopaedic Awareness
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="openTab('wd')" id="card-3">
+            <div class="card-title">Web Mason's Phalanx</div>
+            <img src="images/c.svg" class="card-image">
+            <div class="card-text">
+              <div class="attribute">
+                <span class="stat">+75</span> Tenacity
+              </div>
+              <div class="attribute">
+                <span class="nstat">-10%</span> Agility
+              </div>
+              <div class="attribute">
+                <span class="stat">+5</span> Bragging Rights
+              </div>
+              <div class="special-ability">
+                ◇ Night Shift
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="left-half" id="lh1">
+          <div class="card-details-box" id="gd">
+            <div class="common-heading">
+              Graphic Design
+            </div>
+            <div class="common-text card-details">
+              I am a skilled illustrator across various styles of art and design. I work with Affinity Designer 2,
+              assisted
+              by an iPad and a Pencil.
+            </div>
+          </div>
+          <div class="card-details-box" id="wd">
+            <div class="common-heading">
+              Web Design
+            </div>
+            <div class="common-text card-details">
+              Those four years of computer engineering have to account for something, right? Backend? Frontend? I don't
+              really see a difference. I gotchu fam.
+            </div>
+          </div>
+          <div class="card-details-box" id="cw">
+            <div class="common-heading">
+              Content Writing
+            </div>
+            <div class="common-text card-details">
+              I used to be the Editor-in-Chief of my college media organisation, while also working with the yearbook
+              team,
+              The Editorial Board. I'm no Hemingway, but I can handle my own when it comes to copy writing, or editing.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
