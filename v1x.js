@@ -20,6 +20,30 @@ for (let index = 0; index < pillar.length; index++) {
     });
 }
 
+// ---------------------------
+var buttons = document.getElementsByTagName('button');
+console.log(buttons);
+for (let i = 0; i < buttons.length; i++) {
+    const btn = buttons[i];
+    btn.addEventListener('click', function () {
+        if(document.querySelector('.button-active')){
+            console.log(document.querySelector('.button-active'))
+            document.querySelector('.button-active').classList.remove('button-active');
+           }
+        gsap.fromTo('.forge-blueprint', {
+            // duration: .2,
+            opacity: 0,
+            y: "-100%"
+        }, {
+            delay: .2,
+            y: 0,
+            duration: .3,
+            opacity: 1,
+        })
+        btn.classList.add('button-active');
+    })
+}
+
 // const gd = document.getElementById('.card');
 // const lh1 = document.getElementById("lh1")
 

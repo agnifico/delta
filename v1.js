@@ -104,89 +104,12 @@ let tl5 = gsap.timeline({
     delay: .75,
 });
 
-tl5.fromTo('.stage', {
-    duration: .5,
-    opacity: 0,
-    y: -100
-}, {
-    duration: .2,
-    opacity: 1,
-    // x: 350,
-    y: 0
-})
-
-//
-let tl12= gsap.timeline({
-    scrollTrigger: '.one',
-    start: '50% top',
-    end: 'bottom top',
-    delay: 0,
-    // toggleActions: "play reverse restart reverse",
-});
-tl12.to('#sh1', {
-    text: "",
-    duration: .5
-})
-let tl22= gsap.timeline({
-    scrollTrigger: '.two',
-    start: 'top top',
-    end: 'bottom top',
-    delay: 0,
-    // toggleActions: "play pause restart complete",
-});
-tl22.to('#sh1', {
-    text: "",
-    duration: .5
-})
-let tl32= gsap.timeline({
-    scrollTrigger: '.three',
-    start: '50% top',
-    end: 'bottom top',
-    delay: 0,
-    // toggleActions: "play pause restart complete",
-});
-tl32.to('#sh1', {
-    text: "Gallery",
-    duration: .5
-})
-let tl42= gsap.timeline({
-    scrollTrigger: '.four',
-    start: '50% top',
-    end: 'bottom top',
-    delay: 0,
-    toggleActions: "play reverse restart reverse",
-});
-tl42.to('#sh1', {
-    text: "",
-    duration: .5
-})
-let tl52= gsap.timeline({
-    scrollTrigger: '.five',
-    delay: .5,
-    stagger: 1
-    // toggleActions: "play reverse restart reverse",
-});
-tl52.fromTo('#armoury',{
-    text: " ",
-    borderWidth: 0,
-}, {
-    text: "Skillset // Armoury",
-    borderWidth: 4,
-    duration: .75,
-}).to('#armoury',{
-    borderImage: "linear-gradient(to right, #A19375 0%, #554C3A 100%) 0 0 1 0",
-})
-
-let tl62= gsap.timeline({
-    scrollTrigger: '.six',
-    start: '50% top',
-    end: 'bottom top',
-    delay: 0,
-    toggleActions: "play reverse restart reverse",
-});
-tl62.to('#sh1', {
-    text: "More About Me",
-    duration: .5
-})
+// tl5.fromTo('.forge-blueprint', {
+//     opacity: 0,
+// }, {
+//     delay: .5,
+//     duration: .5,
+//     opacity: 1,
+// })
 
 

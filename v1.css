@@ -31,6 +31,24 @@ body {
     visibility: hidden;
 }
 
+.underline {
+    position: relative;
+    cursor: pointer;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    /* inset: 0; */
+    top: 80%;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    /* transform: skew(-12deg); */
+    /* background: rgba(238, 111, 87, 0.5); */
+    background: hsl(41, 19%, 55%, .7);
+}
+
 .container {
     max-height: 100vh;
     overflow-y: scroll;
@@ -72,9 +90,10 @@ body {
 
 .common-text {
     color: #A59271;
-    font-family: "Inconsolata";
-    font-size: max(1.3rem, 12px);
+    font-family: "Fira Code";
+    font-size: 1rem;
     width: 100%;
+    margin-top: 1rem;
 }
 
 
@@ -277,7 +296,6 @@ body {
 
 button {
     margin-inline: .5rem;
-    margin-bottom: 4rem;
     text-decoration: none;
     transition: box-shadow .15s, transform .15s;
     user-select: none;
@@ -308,6 +326,12 @@ button:hover {
 
 button:active {
     transform: translateY(2px);
+}
+
+.button-active {
+    scale: 1.1;
+    /* margin-inline: .6rem; */
+    background-color: #1D2021;
 }
 
 .five {
@@ -471,6 +495,7 @@ button:active {
     font-family: "Oswald";
     font-size: max(3rem, 32px);
     position: relative;
+    margin-bottom: 1rem;
 }
 
 
@@ -500,6 +525,7 @@ button:active {
     display: flex;
     /* flex-wrap: wrap; */
     width: 100%;
+    height: 100%;
 }
 
 
@@ -508,37 +534,31 @@ button:active {
     display: grid;
     grid-template-areas: "stackx";
     /* min-width: max(70%, min(1000px, 100svw)); */
-    /* height: 50vh; */
-    width: 70%;
-    /* aspect-ratio: 1; */
-    /* background-color: #397367; */
-    margin: auto 0;
+    /* max-width: 70rem; */
+    margin: 0;
+    flex: 2;
 }
 
-@media only screen and (max-width: 1000px) {
-    .box {
-        flex-wrap: wrap;
-    }
 
-    .forge-blueprint {
-        width: 100%;
-    }
-}
 
 .blueprint {
+    max-width: 100%;
     grid-area: stackx;
 }
 
 .desk {
     display: flex;
     flex-direction: column;
+    /* min-width: 420px; */
+    flex: 1;
 }
 
 .details {
     display: grid;
-    width: 420px;
+    height: fit-content;
     /* margin: auto; */
     grid-template-areas: "stack";
+    padding-inline: 1rem;
 }
 
 button img {
@@ -549,4 +569,84 @@ button img {
     grid-area: stack;
     position: relative;
     flex-wrap: wrap;
+}
+
+.btn-tray {
+    padding-inline: .5rem;
+}
+
+.tags-tray {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    height: fit-content;
+    cursor: pointer;
+    flex: 1;
+}
+
+.tag {
+    background-color: #1E2020;
+    /* border: 1px solid #A59271; */
+    font-family: "Fira Code";
+    height: fit-content;
+    font-size: .8rem;
+    color: #A59271;
+    /* border-radius: 1rem; */
+    padding: .3rem .5rem .3rem .5rem;
+    margin: 0 .5rem .5rem 0;
+}
+
+.tag:hover {
+    background-color: #A59271;
+    color: #1E2020;
+}
+
+@media only screen and (max-width: 1000px) {
+    .box {
+        flex-direction: column;
+    }
+
+    .forge-blueprint {
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .desk {
+        position: relative;
+        flex: 2;
+    }
+    .btn-tray {
+        margin: 0 auto;
+    }
+
+    button {
+        scale: 1.5;
+        margin: 1rem 2rem;
+    }
+    .button-active {
+        scale: 2;
+    }
+
+    .details {
+        margin-top: 10rem;
+    }
+
+    .tags-tray {
+        flex: 1;
+    }
+
+    .common-heading {
+        font-size: 3rem;
+    }
+
+    .common-text {
+        font-size: 2rem;
+    }
+
+    .tag {
+        font-size: 1.5rem;
+        padding: .5rem .7rem .5rem .7rem;
+        margin: .3rem .7rem .7rem .3rem;
+    }
+
 }
