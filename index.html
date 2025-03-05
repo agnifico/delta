@@ -10,7 +10,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Fira+Code:wght@300..700&family=Forum&family=Inconsolata:wght@200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="v1.css">
+  <link rel="stylesheet" href="v2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
+    integrity="sha512-B8ruywf8mKA4fm0K8SrrNhO5DTokuipFEo7rEnI0RVTt9p29MJKfg8TfOVwMAFZxgI+zOF4iwOA/ByvyJ/sslw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
@@ -23,42 +26,36 @@
 </head>
 
 <body>
-
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
 
 
   <div class="container">
-    <section class="panel one">
-      <div class="landing">
-        <div class="quote-line" id="q1a">The master <span id="q1b" style="color: #df3756;">economist</span> must possess
-          a </div>
-        <div class="quote-line" id="q1c">rare combination of gifts. <span id="q1d">He must be:</span> </div>
-        <div class="quote-line sq1" style="color: #9FC581;">a mathematician, </div>
-        <div class="quote-line sq1" style="color: #89B865;">a historian, </div>
-        <div class="quote-line sq1" style="color: #659B5E;">a statesman, </div>
-        <div class="quote-line sq1" style="color: #537E4E;">and a philosopher.</div>
-      </div>
-      <audio id="hard-click" src="sounds/mixkit-hard-typewriter-click-1119.wav" preload></audio>
-      <audio id="soft-click" src="sounds/mixkit-typewriter-soft-click-1125.wav" preload></audio>
-      <audio id="ui-click" src="sounds/ui-click.wav" preload></audio>
-      <audio id="wine-glass" src="sounds/mixkit-wine-glass-clink-2936.wav" preload></audio>
-    </section>
+
 
     <section class="panel two">
+      
       <div class="hero">
-        <div class="welcome">
+        <div class="welcome hoverable">
           <img src="images/Logo_Main.svg" style="aspect-ratio: 1;" height="100px">
           <div class="hero-line" id="h1a">welcome to</div>
           <div class="hero-line" id="h1b">
             <span id="h1c">June's </span>
             <span id="h1d">Forge</span>
           </div>
+          <div class="common-text" style="text-align: center; padding-top: 2rem;">A web/visual design studio.<br>📌 Bengaluru, India</div>
 
         </div>
       </div>
     </section>
 
     <section class="three panel">
-      <div class="section-heading">Gallery</div>
+      <div class="section-heading" id="sh1">[> showcase// portfolio]</div>
 
       <div class="img-grid" id="img-grid-one">
         <img src="images/Fire2.jpg" alt="" srcset="">
@@ -86,29 +83,24 @@
     </section>
 
     <section class="panel six">
-      <div class="section-heading">Forge Armoury // Skillset</div>
+      <div class="section-heading" id="sh2">[> armoury// skillset]</div>
       <div class="box">
-        <div class="forge-blueprint">
-          <img src="images/scimitar4.svg" class="blueprint" id="gd-bp">
-          <img src="images/shield2.svg" class="blueprint" id="wd-bp">
-          <img src="images/scimitar3.svg" class="blueprint" id="cw-bp">
-        </div>
         <div class="desk">
-          <div class="btn-tray">
-            <button onclick="openTab('cw')"><img src="images/pen-2-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
-            <button onclick="openTab('gd')" class="button-active"><img src="images/brush-svgrepo-com.svg" alt="" height="20px" width="20px" ></button>
-            <button onclick="openTab('wd')"><img src="images/code-square-svgrepo-com.svg" alt="" height="20px" width="20px"></button>
+          <!-- <div class="common-text">The 3 core services of The Forge:</div> -->
+          <div class="btn-tray" id="bt1">
+            <button onclick="openTab('cw')" class="hoverable">Content Writing</button>
+            <button onclick="openTab('gd')" class="hoverable button-active">Graphic Design</button>
+            <button onclick="openTab('wd')" class="hoverable">Web Design</button>
           </div>
           <div class="details">
             <div class="box armoury-details" id="gd">
-              <div class="common-heading">Graphic Design</div>
               <div class="common-text">
                 Logos. Posters. Symbols. Packaging. Cards. Illustrations. Wireframing. UX/UI.<br><br>
                 Thy shall be done. <br>
                 With an exposure in design spanning a decade, I can handle almost any requirement, and all clients. Whether you are crystal clear about your needs, or require help in polishing your ideas finely, the <span class="underline">Forge</span> has you covered. <br>
                 Our trump card will always be our diverse knowledge, awareness, and design ideologies rooted in psychology. 
               </div>
-              <div class="tags-tray">
+              <div class="tags-tray hoverable2">
                 <div class="tag">Affinity Designer Suite</div>
                 <div class="tag">Vector Illustrations</div>
                 <div class="tag">Photoshop</div>
@@ -118,25 +110,23 @@
               </div>
             </div>
             <div class="box armoury-details hidden" id="cw">
-              <div class="common-heading">Content Writing</div>
               <div class="common-text">
                 I used to serve as the Editor-in-Chief of my college's media publication. To use words in a way that shapes the mindset of the masses, is exactly what I like doing, and am good at. Forget languages, I can speak Colin Firth from Kingsman (hella formal), Ms. Maisel (oh-so-quippy), and Andrew West from Fleabag (poetic, sad boi hours). Basically, <i>wahi</i>, range <i>hai ladke mein.</i> Sometimes Al Pacino from Godfather too.<br><br>
                 <i>* Pulls out a gruff, old man voice * </i><br>
                 "Imma make you an offer you can't refuse!"
               </div>
-              <div class="tags-tray">
+              <div class="tags-tray hoverable2">
                 <div class="tag">Writing Text</div>
                 <div class="tag">Editing Text</div>
               </div>
             </div>
             <div class="box armoury-details hidden" id="wd">
-              <div class="common-heading">Web Design</div>
               <div class="common-text">
                 Let's be real: your average "web developer" in India can't do all of front-end, back-end, and design. Even if they could, can they fill in the content with their own, well-crafted words? <br><br>
                 Here I am, and I can promise, expertise in full-stack development backed by a Computer Science degree is absolutely the least of my skills. <br>
                 Keep it simple, my friend, make sure your website guy can design, and write! 
               </div>
-              <div class="tags-tray">
+              <div class="tags-tray hoverable2">
                 <div class="tag">HTML / CSS / JS</div>
                 <div class="tag">GSAP</div>
                 <div class="tag">node.js</div>
@@ -152,6 +142,12 @@
           </div>
 
         </div>
+        <div class="forge-blueprint">
+          <img src="images/forge-scimitar.svg" class="blueprint hoverable" id="gd-bp">
+          <img src="images/forge-shield.svg" class="blueprint hoverable hidden" id="wd-bp">
+          <img src="images/forge-spear.svg" class="blueprint hoverable hidden" id="cw-bp">
+        </div>
+        
 
       </div>
     </section>
@@ -159,8 +155,24 @@
     <section class="panel seven">
 
     </section>
-  </div>
 
+    <section class="panel one">
+      <div class="landing">
+        <div class="quote-line" id="q1a">The master <span id="q1b" style="color: #df3756;">economist</span> must possess
+          a </div>
+        <div class="quote-line" id="q1c">rare combination of gifts. <span id="q1d">He must be:</span> </div>
+        <div class="quote-line sq1" style="color: #9FC581;">a mathematician, </div>
+        <div class="quote-line sq1" style="color: #89B865;">a historian, </div>
+        <div class="quote-line sq1" style="color: #659B5E;">a statesman, </div>
+        <div class="quote-line sq1" style="color: #537E4E;">and a philosopher.</div>
+      </div>
+      <audio id="hard-click" src="sounds/mixkit-hard-typewriter-click-1119.wav" preload></audio>
+      <audio id="soft-click" src="sounds/mixkit-typewriter-soft-click-1125.wav" preload></audio>
+      <audio id="ui-click" src="sounds/ui-click.wav" preload></audio>
+      <audio id="wine-glass" src="sounds/mixkit-wine-glass-clink-2936.wav" preload></audio>
+    </section>
+  </div>
+  
 
 
 

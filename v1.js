@@ -62,6 +62,11 @@ tl2.from('#h1a', {
     opacity: 0,
     duration: .5,
     ease: "power",
+}, '=').from('.welcome > .common-text', {
+    y: "-20%",
+    opacity: 0,
+    duration: .5,
+    ease: "power",
 }, '=')
 
 let tl3 = gsap.timeline({
@@ -80,24 +85,51 @@ tl3.from('.controls', {
     duration: .25,
     y: 50,
 });
+
 tl35.to('.img-grid img', {
     opacity: 1,
     duration: 1.5,
     stagger: 1 / 8
-});
+}).from('#sh1', {
+    width: 0,
+    text: ' ',
+}, '<0');
 
 
-let tl4 = gsap.timeline({
-    scrollTrigger: '.four',
+let tl6 = gsap.timeline({
+    scrollTrigger: '.six',
     delay: 0,
 });
 
-tl4.from('.xpillar', {
-    duration: 1.5,
-    // fontFamily: "Inconsolata",
-    text: "",
-    stagger: .5
-});
+tl6.from('#sh2', {
+    width: 0,
+    text: ' ',
+    delay: .5,
+}).fromTo('#bt1 > button', {
+    y: 100,
+    opacity: 0,
+}, {
+    y: 0,
+    opacity: 1,
+    stagger: .05,
+    duration: .15
+}, '<.3').fromTo('.armoury-details', {
+    y: 100,
+    opacity: 0,
+}, {
+    y: 0,
+    opacity: 1,
+    stagger: .05,
+    duration: .15
+}, '<.3').fromTo('.forge-blueprint', {
+    y: 100,
+    opacity: 0,
+}, {
+    y: 0,
+    opacity: 1,
+    stagger: .05,
+    duration: .15
+}, '<.3');
 
 let tl5 = gsap.timeline({
     scrollTrigger: '.five',

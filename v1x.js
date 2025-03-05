@@ -1,31 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin)
 
-const pillar = document.querySelectorAll('.pillar');
-
-for (let index = 0; index < pillar.length; index++) {
-    pillar[index].addEventListener('mouseover', () => {
-        pillar[index].style.opacity = '1';
-        pillar[index].style.scale = '1.1';
-        pillar[index].style.marginBottom = '1rem';
-        pillar[index].style.marginTop = '1rem';
-    });
-
-    pillar[index].addEventListener('mouseout', () => {
-
-        pillar[index].style.opacity = '0.5';
-        pillar[index].style.scale = '1';
-        pillar[index].style.marginBottom = '';
-        pillar[index].style.marginTop = '';
-    });
-}
-
-// ---------------------------
 var buttons = document.getElementsByTagName('button');
 console.log(buttons);
 for (let i = 0; i < buttons.length; i++) {
     const btn = buttons[i];
-    btn.addEventListener('click', function () {
+    btn.addEventListener('mousedown', function () {
         if(document.querySelector('.button-active')){
             console.log(document.querySelector('.button-active'))
             document.querySelector('.button-active').classList.remove('button-active');
@@ -119,32 +99,61 @@ function openTab(tabName, displayType = 'visible', thissound = "ui-click") {
     document.getElementById(tabName + '-bp').style.visibility = displayType;
 }
 
-// function openTab(tabName, displayType = 'visible', thissound = "soft-click") {
-//     PlaySound(thissound);
-//     // return
-//     if (lastCard != ' ') {
-//         gsap.to('#' + lastCard, {
-//             // y: -100,
-//             x: 0,
-//             opacity: 0,
-//             duration: .5
-//         });
-//         // card reverse
-//         if (tabName == lastCard) {
-//             tween1.reverse();
-//             lastCard = ' ';
-//             return;
-//         }
-//     }
-//     // entry
-//     gsap.to('#' + tabName, {
-//         // y: -100,
-//         x: 0,
-//         opacity: 1,
-//         duration: .5
-//     });
-//     tween1.play();
-//     lastCard = String(tabName);
-// }
+
+// --------------------------------------------
+// --------------------------------------------
+// --------------------------------------------
 
 
+const $bigBall = document.querySelector('.cursor__ball--big');
+    // const $smallBall = document.querySelector('.cursor__ball--small');
+    const $hoverables = document.querySelectorAll('.hoverable');
+    const $hoverables2 = document.querySelectorAll('.hoverable2');
+
+    // Listeners
+    document.body.addEventListener('mousemove', onMouseMove);
+    for (let i = 0; i < $hoverables.length; i++) {
+      if ((window.opener && !window.opener.closed)) break;
+      $hoverables[i].addEventListener('mouseenter', onMouseHover);
+      $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+    }
+    for (let i = 0; i < $hoverables2.length; i++) {
+        if ((window.opener && !window.opener.closed)) break;
+        $hoverables2[i].addEventListener('mouseenter', onMouseHover2);
+        $hoverables2[i].addEventListener('mouseleave', onMouseHoverOut);
+      }
+
+    // Move the cursor
+    // window.CP.exitedLoop(0);
+
+    function onMouseMove(e) {
+      gsap.to($bigBall, .2, {
+        x: e.pageX - 10,
+        y: e.pageY - 10
+      });
+
+      // TweenMax.to($smallBall, .1, {
+      //   x: e.pageX - 5,
+      //   y: e.pageY - 7 });
+
+    }
+
+    // Hover an element
+    function onMouseHover() {
+      gsap.to($bigBall, .3, {
+        scale: 4
+      });
+
+    }
+    function onMouseHover2() {
+        gsap.to($bigBall, .3, {
+          scale: 2
+        });
+  
+      }
+    function onMouseHoverOut() {
+      gsap.to($bigBall, .3, {
+        scale: 1
+      });
+
+    }
