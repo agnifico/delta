@@ -6,7 +6,8 @@
     --silver: #747474;
     --vibranium: #1D2021;
     --mythril: #A39B8E;
-    --magnifier: 6;
+    --malachite: #007C77;
+    --magnifier: 5;
     --gap: 1vmin;
     --transition: 0.5s;
 }
@@ -115,6 +116,25 @@ body {
     /* grid-template-columns: 2fr 1fr; */
 }
 
+.seven {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+.box2 {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.box3 {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-areas: "img-stack";
+    height: 60%;
+}
 
 
 /* ------------------------------------- */
@@ -133,7 +153,7 @@ body {
     align-self: flex-start;
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-image: linear-gradient(to right, transparent 33%,#A59271 50%, transparent 66%) 0 0 1 0;
+    border-image: linear-gradient(to right, transparent 33%, #A59271 50%, transparent 66%) 0 0 1 0;
     /* border-image: linear-gradient(to right, transparent 0%,#A59271 40%, #554C3A 60%, transparent 100%) 0 0 1 0; */
     /* background-color: #8D6B94; */
     width: 100%;
@@ -202,15 +222,17 @@ body {
 
 
 .img-grid {
-    width: 80%;
+    grid-area: img-stack;
+    inline-size: 90%;
     overflow-x: hidden;
     scrollbar-width: none;
-    height: 50%;
+    /* block-size: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--gap);
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+    margin: 0 auto;
 }
 
 .img-grid img {
@@ -218,7 +240,7 @@ body {
     --brightness: 0.75;
     --grayscale: 1;
     transition: flex var(--transition), filter var(--transition);
-    height: 100%;
+    block-size: 100%;
     filter: grayscale(var(--grayscale)) brightness(var(--brightness));
     object-fit: cover;
     overflow: hidden;
@@ -261,7 +283,7 @@ button {
     border: 3px solid #A59271;
     color: #F7F9F2;
     text-wrap: wrap;
-    width: min-content;
+    /* width: min-content; */
     box-shadow:
         hsla(0, 0%, 0%, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
@@ -306,13 +328,15 @@ button:active {
 
 
 .forge-blueprint {
-    display: grid;
-    grid-template-areas: "stackx";
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* grid-template-areas: "stackx"; */
     /* min-width: max(70%, min(1000px, 100svw)); */
     /* max-width: 70rem; */
     margin: 0;
     flex: 2;
-    padding-top: 3rem;
+    height: fit-content;
+    padding-top: 9rem;
     padding-inline: 2rem;
 }
 
@@ -343,6 +367,7 @@ button:active {
     flex: 1;
     padding-left: 2rem;
     padding-top: 2rem;
+    background-color: #397367;
 }
 
 .details {
@@ -366,22 +391,62 @@ button img {
 }
 
 .btn-tray {
-    width: 100%;
+    /* width: 100%; */
     padding-block: 1rem;
-    display: flex;
+    /* display: flex; */
     /* flex-wrap: wrap; */
     /* flex-direction: column; */
     gap: 10%;
     justify-content: space-between;
 }
 
+.skill-tree-container {
+    flex: 2;
+    /* background-color: #007C77; */
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+}
+
+.skill-tree {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+
+.tree-label {
+    font-family: "Bree Serif";
+    color: var(--gold);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, transparent 10%, #A59271 50%, transparent 90%) 0 0 1 0;
+
+}
+
 .tags-tray {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 2rem;
-    height: fit-content;
-    /* cursor: pointer; */
-    flex: 1;
+    /* flex-direction: column; */
+    align-items: center;
+    /* height: fit-content; */
+    width: 300px;
+    /* background-color: #007C77; */
+    margin: 0 1rem;
+    /* padding-bottom: .5rem; */
+
+}
+
+.st-x {
+    width: 100%;
+}
+
+.tt-x {
+    margin: 0 auto;
+    display: block;
+    columns: 2;
 }
 
 .tag {
@@ -389,19 +454,36 @@ button img {
     /* border: 1px solid #A59271; */
     font-family: "Fira Code";
     height: fit-content;
+    /* width: 100%; */
+    text-align: center;
     font-size: .8rem;
     color: #A59271;
+    /* width: fit-content; */
     /* border-radius: 1rem; */
     padding: .3rem .5rem .3rem .5rem;
-    margin: 0 .5rem .5rem 0;
+    margin: .3rem .5rem .5rem 0;
+    /* margin: .3rem auto; */
+    /* flex: auto; */
 }
 
 .tag:hover {
+    transition: all .1s ease;
     background-color: #A59271;
     color: #1E2020;
+    scale: 1.1;
 }
 
 @media only screen and (max-width: 1000px) {
+
+    .img-grid {
+        flex-direction: column;
+        /* block-size: 100%; */
+    }
+
+    .img-grid img {
+        inline-size: 100%;
+    }
+
     .box {
         flex-direction: column;
     }
@@ -449,6 +531,12 @@ button img {
 
 }
 
+.selected-tag {
+    background-color: #A59271;
+    color: #1E2020;
+}
+
+
 /* --------------------------- */
 
 body .cursor {
@@ -465,4 +553,102 @@ body .cursor__ball {
 
 body .cursor__ball circle {
     fill: rgb(70, 70, 70);
+}
+
+.textpoint {
+    background-color: #1E2020;
+    /* border: 1px solid #A59271; */
+    font-family: "Fira Code";
+    height: fit-content;
+    font-size: .8rem;
+    color: #A59271;
+    /* width: fit-content; */
+    /* border-radius: 1rem; */
+    padding: .3rem .5rem .3rem .5rem;
+    margin: 0 .5rem .5rem 0;
+}
+
+
+.desk2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    padding-inline: 4rem;
+    padding-top: 10rem;
+}
+
+.active-tag {
+    background-color: rgb(165, 146, 113, .5);
+    color: #1E2020;
+}
+
+.terminal {
+    position: relative;
+    margin-top: 5rem;
+    border-top: 2px solid var(--gold);
+}
+
+.terminal-head {
+    display: flex;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.terminal-prompt {
+    font-family: "Inconsolata";
+    color: var(--silver);
+}
+
+.terminal-text {
+    font-family: "Inconsolata";
+    color: var(--light-gold);
+}
+
+.terminal-tags {
+    width: 50%;
+    margin: 0 auto 0 0;
+    padding-top: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.terminal-shutter {
+    /* width: 100%; */
+    /* height: 50%; */
+    position: absolute;
+    z-index: 1;
+    background-color: var(--bg);
+    inset: 0% 0% 0% 0%;
+
+    border-style: solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to bottom, transparent 0%, #A59271 50%, transparent 100%);
+}
+#ts1 {
+    right: 50%;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#ts2 {
+    left: 50%;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#trm-1 {
+    color: var(--malachite);
+}
+
+#trm-2 {
+    color: #FF82A9;
+}
+
+#trm-3 {
+    color: #7F95D1;
 }

@@ -96,6 +96,7 @@ tl35.to('.img-grid img', {
 }, '<0');
 
 
+
 let tl6 = gsap.timeline({
     scrollTrigger: '.six',
     delay: 0,
@@ -121,15 +122,24 @@ tl6.from('#sh2', {
     opacity: 1,
     stagger: .05,
     duration: .15
-}, '<.3').fromTo('.forge-blueprint', {
-    y: 100,
+}, '<.3').fromTo('.terminal', {
+    // width: '0%',
     opacity: 0,
 }, {
-    y: 0,
+    // width: '100%',
     opacity: 1,
-    stagger: .05,
     duration: .15
-}, '<.3');
+}, '<.3')
+.to('#ts1', {
+    right: '100%',
+    borderWidth: 0,
+    duration: .2
+}, '<0.4')
+.to('#ts2', {
+    left: '100%',
+    borderWidth: 0,
+    duration: .2
+}, '<');
 
 let tl5 = gsap.timeline({
     scrollTrigger: '.five',

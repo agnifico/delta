@@ -69,34 +69,60 @@ let lh1 = document.getElementById("lh1");
 let stage = document.getElementById("stage");
 let x = document.getElementsByClassName('card-details-box');
 
-let tween1 = gsap.timeline();
 
-tween1.to('.card', {
-    x: 0,
-    duration: .3
-}).to('#card-1', {
-    x: 0,
-    // y: -50,
-    duration: .1
-}).to('#card-3', {
-    x: 0,
-    // y: 50,
-    duration: .1
-});
-tween1.pause();
+var shutter_open = gsap.timeline()
+.to('#ts1', {
+    right: '50%',
+    borderWidth: 2,
+    duration: .2
+})
+.to('#ts2', {
+    left: '50%',
+    borderWidth: 2,
+    duration: .2
+}, '=')
+.to('#ts1', {
+    right: '100%',
+    borderWidth: 0,
+    duration: .2
+}, '<0.4')
+.to('#ts2', {
+    left: '100%',
+    borderWidth: 0,
+    duration: .2
+}, '<')
+
+shutter_open.pause();
+
 
 function openTab(tabName, displayType = 'visible', thissound = "ui-click") {
     PlaySound(thissound);
     const x = document.getElementsByClassName('armoury-details');
-    const y = document.getElementsByClassName('blueprint');
+    // const y = document.getElementsByClassName('blueprint');
+    shutter_open.restart();
+    for (let i = 0; i < x.length; i++) {
+        x[i].style.visibility = "hidden";
+        // y[i].style.visibility = "hidden";
+    }
+    var y = {'cw': "'content writing'", 'gd': "'graphicdesign'", 'wd': "'web design'"};
+    gsap.to('#trm-1', {
+        text: y[tabName],
+        duration: 0.5
+    })
+    
+    document.getElementById(tabName).style.visibility = displayType;
+    // document.getElementById(tabName + '-bp').style.visibility = displayType;
+}
+
+function openTab2(tabName, displayType = 'visible', thissound = "ui-click") {
+    PlaySound(thissound);
+    const x = document.getElementsByClassName('img-grid');
 
     for (let i = 0; i < x.length; i++) {
         x[i].style.visibility = "hidden";
-        y[i].style.visibility = "hidden";
     }
     
     document.getElementById(tabName).style.visibility = displayType;
-    document.getElementById(tabName + '-bp').style.visibility = displayType;
 }
 
 
