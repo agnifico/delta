@@ -11,6 +11,9 @@
     href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Crete+Round:ital@0;1&family=Fira+Code:wght@300..700&family=Forum&family=Inconsolata:wght@200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="v2.css">
+  <link rel="stylesheet" href="v2x.css">
+  <link rel="stylesheet" href="cube.css">
+  <link rel="stylesheet" href="aux.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
     integrity="sha512-B8ruywf8mKA4fm0K8SrrNhO5DTokuipFEo7rEnI0RVTt9p29MJKfg8TfOVwMAFZxgI+zOF4iwOA/ByvyJ/sslw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -37,12 +40,71 @@
 
   <div class="container">
 
+    <div class="terminal" inert>
 
-    <section class="panel two">
+      <div class="terminal-head">
+        <div class="terminal-prompt">
+          [<span id="trm-2">you</span>@<span id="trm-3">jxnesforge</span>]:&thinsp;
+        </div>
+        <div class="terminal-text"> <span id="trm-4"> </span> <span id="trm-1"> </span> <span id="trm-0"> </span> <span
+            id="trm-5"> </span> </div>
+      </div>
+
+      <div class="terminal-tags-container">
+        <div class="terminal-shutter" id="ts1"></div>
+        <div class="terminal-shutter" id="ts2"></div>
+        <div class="box69">
+          <div class="terminal-tags" id="gd-tag-set">
+            <div class="tag">Photoshop</div>
+            <div class="tag">Illustrator</div>
+            <div class="tag">Affinity Designer</div>
+            <div class="tag">Procreate</div>
+            <div class="tag">RAW Post-processing</div>
+            <div class="tag">UX/UI</div>
+            <div class="tag">Branding</div>
+            <div class="tag">Typography</div>
+            <div class="tag">Wireframing</div>
+            <div class="tag">Vector Illustration</div>
+          </div>
+          <div class="terminal-tags hidden" id="wd-tag-set">
+            <div class="tag">HTML / CSS</div>
+            <div class="tag">JavaScript</div>
+            <div class="tag">Python</div>
+            <div class="tag">node.js</div>
+            <div class="tag">GSAP</div>
+            <div class="tag">Mobile Responsiveness</div>
+            <div class="tag">CMS / Wordpress</div>
+            <div class="tag">Web Builders</div>
+            <div class="tag">UX / UI</div>
+            <div class="tag">Wireframing</div>
+          </div>
+          <div class="terminal-tags hidden" id="cw-tag-set">
+            <div class="tag">Keyword Research</div>
+            <div class="tag">Content Writing</div>
+            <div class="tag">Copywriting</div>
+            <div class="tag">Editing</div>
+            <div class="tag">Brand Storytelling</div>
+            <div class="tag">Landing Page Copy</div>
+            <div class="tag">Content Strategy</div>
+            <div class="tag">SEO</div>
+            <div class="tag">Style Guide Adherence</div>
+            <div class="tag">Conversion Copywriting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div inert class="panel bg-layer">
+      <video autoplay muted loop id="myVideo">
+        <source src="https://videos.pexels.com/video-files/5561380/5561380-hd_1920_1080_25fps.mp4" type="video/mp4">
+      </video>
+
+    </div>
+    <section class="panel logo-panel">
 
       <div class="hero">
         <div class="welcome hoverable">
-          <img src="images/Logo_Main.svg" style="aspect-ratio: 1;" height="100px">
+          <img src="images/Logo_Main.svg" width="150px" height="150px">
           <div class="hero-line" id="h1a">welcome to</div>
           <div class="hero-line" id="h1b">
             <span id="h1c">June's </span>
@@ -55,25 +117,33 @@
       </div>
     </section>
 
-    <section class="panel seven">
+    <section class="panel me-panel">
       <div class="box2">
 
-        <div class="common-text">Hi, I am June.</div>
+        <div class="common-text">Helloz</div>
+        <div class="cube-container">
+          <div class="cube">
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face front"></div>
+            <div class="face back"></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="panel six">
-      <div class="section-heading" id="sh2">[> armoury// skillset]
-
-      </div>
+    <section class="panel skills-panel">
       <div class="box">
 
         <div class="desk2">
           <!-- <div class="common-text">The 3 core services of The Forge:</div> -->
-          <div class="btn-tray" id="bt1">
-            <button onclick="openTab('cw')" class="hoverable">Content Writing</button>
-            <button onclick="openTab('gd')" class="hoverable button-active">Graphic Design</button>
-            <button onclick="openTab('wd')" class="hoverable">Web Design</button>
+          <div class="btn-tray" id="bt-1">
+            <button onclick="openTab('cw')" class="btn-one hoverable">Content Writing</button>
+            <button onclick="openTab('gd')" class="btn-one hoverable button-active">Graphic Design</button>
+            <button onclick="openTab('wd')" class="btn-one hoverable">Web Design</button>
           </div>
           <div class="details">
             <div class="box armoury-details" id="gd">
@@ -113,90 +183,12 @@
               </div>
             </div>
           </div>
-          <div class="terminal">
-
-            <div class="terminal-head">
-              <div class="terminal-prompt">
-                [<span id="trm-2">you</span>@<span id="trm-3">jxnesforge</span>]:&thinsp;
-              </div>
-              <div class="terminal-text">armoury// skillset <span id="trm-1">design</span> --tags</div>
-            </div>
-
-            <div class="terminal-tags">
-              <div class="terminal-shutter" id="ts1"></div>
-              <div class="terminal-shutter" id="ts2"></div>
-              <div class="tag">Photoshop</div>
-              <div class="tag">Illustrator</div>
-              <div class="tag">Affinity Designer</div>
-              <div class="tag">Procreate</div>
-              <div class="tag">RAW Post-processing</div>
-              <div class="tag">UX/UI</div>
-              <div class="tag">Branding</div>
-              <div class="tag">Typography</div>
-              <div class="tag">Wireframing</div>
-              <div class="tag">Vector Illustration</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="three panel">
-      <div class="section-heading" id="sh1">[> showcase// portfolio]</div>
+    <section class="gallery-panel panel">
 
       <div class="box3">
         <div class="img-grid" id="img-grid-one">
@@ -214,19 +206,42 @@
         </div>
       </div>
 
+      <div class="box4">
 
-      <div class="controls">
-        <button onclick="openTab2('img-grid-one')">
-          Isometric
-        </button>
-        <button onclick="openTab2('img-grid-two')">
-          Forge Blueprints
-        </button>
+        <div class="social-links">
+          <ul>
+            <!-- <p class="common-text">Helloz</p> -->
+            <li>
+              <a href="https://github.com/agnifico" target="_blank">
+
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/jxnesforge" target="_blank">Dribbble</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/zerodegreefire" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-tray" id="bt-2">
+          <button class="btn-two" onclick="openTab2('img-grid-one')">
+            Isometric
+          </button>
+          <button class="btn-two" onclick="openTab2('img-grid-two')">
+            Forge Blueprints
+          </button>
+
+        </div>
+        
       </div>
+
     </section>
 
 
-    <section class="panel one">
+    <section class="panel quote-panel">
       <div class="landing">
         <div class="quote-line" id="q1a">The master <span id="q1b" style="color: #df3756;">economist</span> must possess
           a </div>

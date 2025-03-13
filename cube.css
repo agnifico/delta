@@ -1,0 +1,74 @@
+
+.cube-container {
+    width: 200px;
+    height: 200px;
+    perspective: 500px;
+    margin: 100px;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: turn 10s linear infinite;
+    /* transform: rotate3d(-1, 1, 1, 45deg); */
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    background: hsla(0, 40%, 45%, 0.8);
+    border: 2px solid var(--gold);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    transition: all 2s ease-in-out;
+
+    /* clip-path: ellipse(25% 50% at 50% 50%); */
+}
+
+.front {
+    transform: translateZ(100px) rotateX(-45deg) rotateZ(45deg);
+    animation: front-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg) rotateX(-45deg) rotateZ(45deg);
+    animation: back-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px) rotateX(-45deg) rotateZ(45deg);
+    animation: left-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px) rotateX(-45deg) rotateZ(45deg);
+    animation: right-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px) rotateY(-90deg) rotateZ(45deg);
+    animation: top-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px) rotateZ(45deg);
+    animation: bottom-ani 5s ease-in-out infinite;
+    /* animation: huiii2 5s ease-in-out infinite; */
+}
+
+
+/* 
+.face {
+    animation: none;
+} */
