@@ -332,6 +332,22 @@ gallery_enter.from('#bt-2', {
 }, '=');
 
 
+// ------------------------------ CONTACTS -------------------------------
+
+let contacts1 = gsap.timeline({
+    scrollTrigger:
+    {
+        trigger: '.contacts-panel',
+        toggleActions: "restart none none reverse"
+    },
+
+});
+
+contacts1.to('.terminal', {
+    y: 250,
+    duration: .4,
+})
+
 // -------------------------------------------------------------
 
 

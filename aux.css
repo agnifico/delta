@@ -122,6 +122,6 @@ body .cursor__ball circle {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    filter: sepia(1) grayscale(.75);
+    filter: grayscale(1);
 }
 
